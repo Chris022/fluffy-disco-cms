@@ -1,5 +1,6 @@
 services:
   apache:
+    container_name: fluffy-disco-cms-apache
     image: php:8.1.16-apache
     ports:
       - "9090:80"
@@ -9,7 +10,7 @@ services:
       - ./src/:/var/www/html/
 
   mariadb:
-    container_name: mariadb
+    container_name: fluffy-disco-cms-mariadb
     image: mariadb
     volumes:
       - db-data:/etc/data
@@ -19,13 +20,14 @@ services:
       - database
 
   phpmyadmin:
+    container_name: fluffy-disco-cms-phpmyadmin
     image: phpmyadmin/phpmyadmin
     networks:
       - database
     ports:
       - "9091:80"
     environment:
-      - PMA_HOST=mariadb
+      - PMA_HOST=fluffy-disco-cms-mariadb
 
 volumes:
   db-data:

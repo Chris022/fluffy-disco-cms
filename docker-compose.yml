@@ -6,7 +6,7 @@ services:
     networks:
       - database
     volumes:
-      - <html_folder>:/var/www/html/
+      - ./src/:/var/www/html/
 
   mariadb:
     container_name: mariadb

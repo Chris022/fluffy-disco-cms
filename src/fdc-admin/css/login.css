@@ -1,0 +1,36 @@
+.fdc-login-container{
+    width: 99vw;
+    height: 98vh;
+
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #90e0fc;
+}
+
+.fdc-login-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #f98eb1;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.fdc-login-form > input{
+    background-color: transparent;
+
+    border: #ebfeff 2px solid;
+}
+
+.fdc-login-form > label{
+    color: #ebfeff;
+}
+
+
+.fdc-login-devider{
+    height:30px;
+}
